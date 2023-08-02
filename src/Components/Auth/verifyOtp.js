@@ -15,7 +15,7 @@ const VerifyOtp = () => {
     const handleSubmit = (e) =>{
         e.preventDefault();
         setSubmit(true)
-        if(otp == '' || otp == null || otp == undefined)
+        if(otp === '' || otp === null || otp === undefined)
         {
             return
         } 
@@ -35,9 +35,9 @@ const VerifyOtp = () => {
           return;
         }
 
-        if(otp.length== 6 )
+        if(otp.length=== 6 )
         {
-            if(otp == config.otp)
+            if(otp === config.otp)
             {
                 let registerUser =  JSON.parse(localStorage.getItem('registerdUser'));
                 registerUser.is_logged_in = true;
@@ -91,7 +91,7 @@ const VerifyOtp = () => {
     
         const timer = setInterval(() => {
           seconds--;
-          if (statSec != 0) statSec--;
+          if (statSec !== 0) statSec--;
           else statSec = 59;
           if (statSec < 10) {
             textSec = '0' + statSec;
@@ -100,7 +100,7 @@ const VerifyOtp = () => {
           }
           setDisplay(`${prefix}${Math.floor(seconds / 60)}:${textSec}`);
     
-          if (seconds == 0) {
+          if (seconds === 0) {
             console.log('finished');
             clearInterval(timer);
             setResendOtp(true)

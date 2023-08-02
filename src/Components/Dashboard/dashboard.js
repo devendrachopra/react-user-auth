@@ -11,27 +11,27 @@ const Dashboard = () => {
 
     return (
         <>
-         <div className="text-center">
-            <NavLink style={({ isActive }) => {
-                    return {
-                        textDecoration: isActive ? "underline" : "",
-                    };
-                }} className="default-btn add_btn_art" to="/dashboard/my-dashboard">
-                My Dashboard
-            </NavLink>
-            <NavLink style={({ isActive }) => {
-                    return {
-                        textDecoration: isActive ? "underline" : "",
-                        marginLeft : '15px'
-                    };
-                }} className="default-btn add_btn_art" to="/dashboard/edit-profile">
-                Edit Profile
-            </NavLink>
-            <Link style={{marginLeft : "15px"}} className="default-btn add_btn_art" to="/" onClick={()=>logout()}>
-                Logout
-            </Link>
-        </div>
-        <Outlet></Outlet>
+            <div className="text-center">
+                <NavLink style={({ isActive }) => {
+                        return {
+                            textDecoration: isActive ? "underline" : "",
+                        };
+                    }} className="default-btn add_btn_art" to="/dashboard/my-dashboard">
+                    My Dashboard
+                </NavLink>
+                <NavLink style={({ isActive }) => {
+                        return {
+                            textDecoration: isActive ? "underline" : "",
+                            marginLeft : '15px'
+                        };
+                    }} className="default-btn add_btn_art" to="/dashboard/edit-profile">
+                    Edit Profile
+                </NavLink>
+                <Link style={{marginLeft : "15px"}} className="default-btn add_btn_art" to="/" onClick={()=>logout()}>
+                    Logout
+                </Link>
+            </div>
+            <Outlet></Outlet>
         </>
        
     )

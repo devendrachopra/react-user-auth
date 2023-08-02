@@ -12,7 +12,7 @@ const RegisterUser = () =>{
         let registerUser = JSON.parse(localStorage.getItem('registerdUser'));
         if(registerUser)
         {
-          if(registerUser.mobile == data.mobileNumber)
+          if(registerUser.mobile === data.mobileNumber)
           {
             new_user = false
           }
