@@ -25,6 +25,7 @@ const createRoutes = () =>(
                     <Route path="edit-profile" element={<EditProfile/>}/>
                 </Route>
             </Route>
+            <Route path="*" element={<Navigate replace to={'/'}/>}></Route>
         </Routes>
     </Router>
 )
